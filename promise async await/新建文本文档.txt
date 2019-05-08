@@ -1,0 +1,70 @@
+ 解决异步
+
+   一.Promise
+
+   *.new Promise((resolve,resject)=>{
+	
+    }).then((resolve,resject)=>{
+
+    }).then((resolve,resject)=>{
+	
+    }).catch({
+
+
+    })
+
+    Promise 链式调用
+
+    var p = function(){
+       return new Promise((resolve,resject)=>{
+	 setTimeout(()=>{
+	   resolve(1000)
+ 	 },1000)
+       })
+    }
+    p().then(res=>{
+	console.log('res1...' res);
+        return Promise.resolve();
+        return 100;
+        return Promise.resolve(100);
+    },err=>{
+        console.log('err1...' res);
+    }).then(res=>{
+	console.log('res2...' res);
+    },err=>{
+        console.log('err2...' res);
+    }).then(res=>{
+	console.log('res3...' res);
+    },err=>{
+        console.log('err3...' res);
+    }).catch((err)=>{
+	console.log('err4...' err);
+    });      
+    
+  二.async/await
+
+   *.async/await 是ES7的语法
+   
+     let res = await p();
+    
+     res是个啥
+
+    
+  三.generator
+
+   *generator
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
